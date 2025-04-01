@@ -1,5 +1,5 @@
-function Component({ name }) {
-  return <p className="company-name">{name}</p>;
+function Component({ content }) {
+  return <p className="company-name">{content}</p>;
 }
 
 export default Component;

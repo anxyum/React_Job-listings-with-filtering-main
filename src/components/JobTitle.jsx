@@ -1,5 +1,5 @@
-function Component({ jobTitle }) {
-  return <p className="job-title">{jobTitle}</p>;
+function Component({ content }) {
+  return <p className="job-title">{content}</p>;
 }
 
 export default Component;
