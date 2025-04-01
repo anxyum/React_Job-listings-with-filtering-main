@@ -41,7 +41,13 @@ function App() {
 
   return (
     <main>
-      {[...tags].length > 0 && <div>{[...tags].map(() => <p>azdsqdq</p>)}</div>}
+      {[...tags].length > 0 && (
+        <div>
+          {[...tags].map((tag) => (
+            <p>{tag}</p>
+          ))}
+        </div>
+      )}
       {userData
         .filter((user) =>
           [...tags].map((tag) => user.tags.includes(tag)).every(Boolean)
