@@ -13,6 +13,8 @@ import Infos from "./components/Infos";
 import JobTitle from "./components/JobTitle";
 import Tag from "./components/Tag";
 import Tags from "./components/Tags";
+import ActiveTags from "./components/activeTags";
+import ActiveTag from "./components/activeTag";
 
 function App() {
   const [userData, setUserData] = useState([]);
@@ -46,19 +48,11 @@ function App() {
   return (
     <main>
       <header></header>
-      {tags.length > 0 && (
-        <div>
-          {tags.map((tag) => (
-            <p
-              onClick={() => {
-                setTag(tags.filter((t) => t !== tag));
-              }}
-            >
-              {tag}
-            </p>
-          ))}
-        </div>
-      )}
+      <ActiveTags>
+        {tags.map((tag) => (
+          <ActiveTag key={tag} content={tag} />
+        ))}
+      </ActiveTags>
       <div className="cards">
         {userData
           .filter((user) =>
